@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <style>
+        .err-msg {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="form_post.php" method="POST" name="Form">
+                <h2>Neumorphic Form</h2>
+                <!-- <p id="result"></p> -->
+                <!-- Student details -->
+                <div class="input-box">
+                    <i class='bx bx-user-circle'></i>
+                    <input type="text" placeholder="Username" name="Username" id="Username">
+                    <span class="err-msg"></span>
+                </div>
+
+
+                <div class="input-box">
+                    <i class='bx bxl-gmail'></i>
+                    <input type="email" placeholder="Email" name="emailAddr" id="emailAddr">
+                    <span class="err-msg"></span>
+                </div>
+                <div class="input-box">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" placeholder="Password" name="password" id="password">
+                    <span class="err-msg"></span>
+                </div>
+                <div class="input-box">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" placeholder="Confirm password" name="CPassword" id="cpassword">
+                    <span class="err-msg"></span>
+                    <div>
+                        <label for="Branch">Choose a Branch</label>
+
+                        <select name="Branch" id="Choose">
+                            <option> =Please select option= </option>
+                            <option value="Computer Enginnering">CSE</option>
+                            <option value="Machine Learning">ML</option>
+                            <option value="Data science">Data science</option>
+                            <option value="Cyber Security">Cyber</option>
+                            <option value="Artifical Enginnering">AI</option>
+                            <option value="Electrical Enginnering">EE</option>
+                            <option value="Information Technology">IT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="Button">
+                    <input type="submit" class="btn" value="Register" onclick="return validation()"
+                        style="font-size: 1.5em;">
+                </div>
+                <!-- <div class="group">
+                    <span> <a href="#">Forgot password</a></span>
+                    <br>
+                    <span> <a href="#">Login</a></span>
+                </div> -->
+            </form>
+        </div>
+        <!-- this pop up has some issue -->
+        <!-- <div class="popup" id="popup">
+            <ion-icon name="shield-checkmark-outline"></ion-icon>
+            <h2>Thank You</h2>
+            <p>You were registered successfully. Thank you</p>
+            <a href="#"><button>OK</button></a>
+        </div> -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="form.js"></script>
+</body>
+
+</html>
